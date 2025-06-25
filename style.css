@@ -1,0 +1,160 @@
+/* ---- GERAL E FONTES ---- */
+:root {
+    --cor-fundo: #f0f8ff; /* Azul bem clarinho (AliceBlue) */
+    --cor-secao: #ffffff;
+    --cor-cartao-comunicacao: #e0ffff; /* Ciano claro (LightCyan) */
+    --cor-cartao-tarefa: #fffacd; /* Amarelo claro (LemonChiffon) */
+    --cor-texto: #2c3e50; /* Azul escuro acinzentado */
+    --cor-borda: #b0c4de; /* Cinza azulado (LightSteelBlue) */
+    --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+header, section {
+    background-color: var(--cor-secao);
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    max-width: 1200px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #34495e; /* Azul um pouco mais forte */
+}
+
+p {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* ---- QUADRO ARRASTÁVEL ---- */
+.quadro-arrastavel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    min-height: 100px; /* Espaço para soltar itens */
+}
+
+/* ---- CARTÕES DE COMUNICAÇÃO ---- */
+.cartao {
+    background-color: var(--cor-cartao-comunicacao);
+    border: 2px solid var(--cor-borda);
+    border-radius: 10px;
+    padding: 15px;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer; /* Mãozinha ao passar o mouse */
+    transition: transform 0.2s, box-shadow 0.2s;
+    user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.cartao:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cartao .emoji {
+    font-size: 3.5em; /* Emoji bem grande */
+    margin-bottom: 10px;
+}
+
+.cartao .texto {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* ---- SEÇÃO DA AGENDA ---- */
+.colunas-agenda {
+    display: flex;
+    gap: 20px;
+}
+
+.coluna-periodo {
+    flex: 1; /* Cada coluna ocupa o mesmo espaço */
+    background-color: var(--cor-fundo);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px dashed var(--cor-borda);
+}
+
+.lista-tarefas {
+    display: flex;
+    flex-direction: column; /* Tarefas em coluna */
+    gap: 10px;
+}
+
+.cartao-tarefa {
+    background-color: var(--cor-cartao-tarefa);
+    border: 2px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 1.2em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: grab; /* Cursor de "agarrar" */
+    user-select: none;
+}
+
+.cartao-tarefa .emoji {
+    font-size: 1.5em;
+}
+
+/* ---- ESTILOS PARA ARRASTAR E SOLTAR ---- */
+.sortable-ghost {
+    opacity: 0.4;
+    background-color: #add8e6; /* Azul claro */
+    border-style: dashed;
+}
+
+.sortable-drag {
+    cursor: grabbing !important; /* Mão "agarrando" */
+    opacity: 0.9;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ---- DESIGN RESPONSIVO (para celulares e tablets) ---- */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .colunas-agenda {
+        flex-direction: column; /* Colunas ficam uma embaixo da outra */
+    }
+
+    .cartao {
+        width: 120px;
+        height: 120px;
+    }
+
+    .cartao .emoji {
+        font-size: 3em;
+    }
+
+    .cartao .texto {
+        font-size: 1em;
+    }
+}
