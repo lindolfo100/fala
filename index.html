@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Mundo - Comunicação e Rotina</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Biblioteca para arrastar e soltar (não precisa baixar, usa a internet) -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <!-- Nosso script de interatividade -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Meu Mundo de Comunicação e Rotina</h1>
+    </header>
+
+    <main>
+        <!-- Seção de Comunicação -->
+        <section id="comunicacao">
+            <h2>💬 Quero me comunicar</h2>
+            <p>Clique em um cartão para ouvir. Você pode arrastar para organizar como quiser!</p>
+            <div id="quadro-comunicacao" class="quadro-arrastavel">
+                <!-- Edite ou adicione cartões aqui! -->
+                <div class="cartao" data-texto="Eu quero">
+                    <span class="emoji">🙋‍♂️</span>
+                    <span class="texto">Eu quero</span>
+                </div>
+                <div class="cartao" data-texto="Eu não quero">
+                    <span class="emoji">🙅‍♂️</span>
+                    <span class="texto">Eu não quero</span>
+                </div>
+                <div class="cartao" data-texto="beber água">
+                    <span class="emoji">💧</span>
+                    <span class="texto">Beber água</span>
+                </div>
+                <div class="cartao" data-texto="comer">
+                    <span class="emoji">🍎</span>
+                    <span class="texto">Comer</span>
+                </div>
+                <div class="cartao" data-texto="ir ao banheiro">
+                    <span class="emoji">🚽</span>
+                    <span class="texto">Banheiro</span>
+                </div>
+                <div class="cartao" data-texto="brincar">
+                    <span class="emoji">🧸</span>
+                    <span class="texto">Brincar</span>
+                </div>
+                 <div class="cartao" data-texto="descansar">
+                    <span class="emoji">😴</span>
+                    <span class="texto">Descansar</span>
+                </div>
+                <div class="cartao" data-texto="Sim">
+                    <span class="emoji">👍</span>
+                    <span class="texto">Sim</span>
+                </div>
+                <div class="cartao" data-texto="Não">
+                    <span class="emoji">👎</span>
+                    <span class="texto">Não</span>
+                </div>
+                <div class="cartao" data-texto="Obrigado">
+                    <span class="emoji">😊</span>
+                    <span class="texto">Obrigado</span>
+                </div>
+                 <div class="cartao" data-texto="Eu te amo">
+                    <span class="emoji">❤️</span>
+                    <span class="texto">Eu te amo</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção da Agenda -->
+        <section id="agenda">
+            <h2>🗓️ Minha Rotina de Hoje</h2>
+            <p>Arraste as tarefas para organizar o seu dia.</p>
+            <div class="colunas-agenda">
+                <!-- Coluna da Manhã -->
+                <div class="coluna-periodo">
+                    <h3>☀️ Manhã</h3>
+                    <div id="lista-manha" class="lista-tarefas quadro-arrastavel">
+                        <!-- Tarefas da manhã -->
+                        <div class="cartao-tarefa" data-texto="Acordar e espreguiçar">
+                            <span class="emoji">🥱</span> Acordar
+                        </div>
+                        <div class="cartao-tarefa" data-texto="Tomar café da manhã">
+                            <span class="emoji">🥣</span> Café da manhã
+                        </div>
+                        <div class="cartao-tarefa" data-texto="Escovar os dentes">
+                            <span class="emoji">🪥</span> Escovar os dentes
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna da Tarde -->
+                <div class="coluna-periodo">
+                    <h3>🌇 Tarde</h3>
+                    <div id="lista-tarde" class="lista-tarefas quadro-arrastavel">
+                        <!-- Tarefas da tarde -->
+                        <div class="cartao-tarefa" data-texto="Almoçar">
+                            <span class="emoji">🍛</span> Almoçar
+                        </div>
+                        <div class="cartao-tarefa" data-texto="Fazer atividade da escola">
+                            <span class="emoji">📚</span> Atividade
+                        </div>
+                        <div class="cartao-tarefa" data-texto="Brincar lá fora">
+                            <span class="emoji">🌳</span> Brincar lá fora
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna da Noite -->
+                <div class="coluna-periodo">
+                    <h3>🌙 Noite</h3>
+                    <div id="lista-noite" class="lista-tarefas quadro-arrastavel">
+                        <!-- Tarefas da noite -->
+                        <div class="cartao-tarefa" data-texto="Jantar">
+                            <span class="emoji">🍲</span> Jantar
+                        </div>
+                        <div class="cartao-tarefa" data-texto="Tomar banho">
+                            <span class="emoji">🚿</span> Tomar banho
+                        </div>
+                        <div class="cartao-tarefa" data-texto="Hora de dormir">
+                            <span class="emoji">🛌</span> Hora de dormir
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
