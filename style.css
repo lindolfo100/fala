@@ -132,6 +132,87 @@ p {
 }
 
 /* ---- DESIGN RESPONSIVO (para celulares e tablets) ---- */
+/* ---- SEÇÃO DE CONVERSA ---- */
+#conversa-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#pergunta-texto {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+#respostas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.botao-resposta {
+    background-color: var(--cor-cartao-comunicacao);
+    border: 2px solid var(--cor-borda);
+    border-radius: 10px;
+    padding: 20px 30px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    color: var(--cor-texto);
+}
+
+.botao-resposta:hover {
+    transform: scale(1.05);
+    background-color: #cceeff; /* Um pouco mais escuro no hover */
+}
+
+/* Estilos para feedback */
+.botao-resposta.correto {
+    background-color: #d4edda; /* Verde claro */
+    border-color: #c3e6cb;
+}
+
+.botao-resposta.errado {
+    background-color: #f8d7da; /* Vermelho claro */
+    border-color: #f5c6cb;
+    opacity: 0.7;
+}
+
+#feedback-texto {
+    font-size: 1.2em;
+    font-weight: bold;
+    min-height: 25px; /* Para não "pular" a tela quando o texto aparece */
+}
+
+#proxima-pergunta {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+#proxima-pergunta:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+
 @media (max-width: 768px) {
     body {
         padding: 10px;
